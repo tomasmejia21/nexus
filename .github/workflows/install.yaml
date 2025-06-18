@@ -24,4 +24,5 @@ jobs:
           NEXUS_PASSWORD: ${{ secrets.NEXUS_PASSWD }}
         run: |
           pip install milib-ejemplo \
-            --index-url http://${NEXUS_USERNAME}:${NEXUS_PASSWORD}@
+            --index-url http://${NEXUS_USERNAME}:${NEXUS_PASSWORD}@ec2-3-90-230-220.compute-1.amazonaws.com:8081/repository/nexus/simple/ \
+            --trusted-host ec2-3-90-230-220.compute-1.amazonaws.com
